@@ -1,5 +1,5 @@
 ---
-
+import QwikLogo from "../UI/QwikLogo.astro";
 ---
 
 <html lang="en">
@@ -7,7 +7,109 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Диплом</title>
   </head>
-  <body></body>
+  <body class="p-4 bg-slate-800 flex flex-col gap-2">
+    <div class="flex gap-2 flex-col">
+      <h1 class="text-white text-2xl text-center">
+        Сравнение разных веб технологий
+      </h1>
+      <p class="text-white text-center">
+        Данная страница была сгенирирована (SSG) web-framework <a
+          href="https://www.astro.build"
+          target="_blank"
+          class="underline text-lg">Astro</a
+        >
+        (Это можно увидеть в мета описание - генератор)
+      </p>
+    </div>
+
+    <div class="text-white grid gap-4 mx-auto">
+      <!-- Parent div -->
+      <!-- React -->
+      <div
+        class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
+      >
+        <i
+          class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
+        ></i>
+        <a href="react-demo">
+          <h2 class="text-center text-xl">
+            React <i class="text-[#149ECA] fa-brands fa-react"></i>
+          </h2>
+          <p>
+            На данный момент один из самых популярных библиотек для построения
+            UI
+          </p>
+          <p>Был реализован счетчик, ToDo-List, а так же блог</p>
+        </a>
+      </div>
+      <!-- Svelte -->
+      <div
+        class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
+      >
+        <i
+          class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
+        ></i>
+        <a href="svelte-demo">
+          <h2 class="justify-center items-center text-xl flex gap-2">
+            Svelte <img
+              src="public/svelte-icon.svg"
+              width="20px"
+              height="20px"
+              alt=""
+            />
+          </h2>
+        </a>
+        <p>
+          На данный момент один из самых популярных библиотек для построения UI
+        </p>
+        <p>Был реализован счетчик, ToDo-List, а так же блог</p>
+      </div>
+      <!-- Qwik -->
+      <div
+        class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
+      >
+        <i
+          class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
+        ></i>
+        <a href="svelte-demo">
+          <h2 class="justify-center items-center text-xl flex gap-2">
+            Qwik <QwikLogo />
+          </h2>
+        </a>
+        <p>
+          На данный момент один из самых популярных библиотек для построения UI
+        </p>
+        <p>Был реализован счетчик, ToDo-List, а так же блог</p>
+      </div>
+
+      <div
+        class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
+      >
+        <i
+          class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
+        ></i>
+        <a href="svelte-demo">
+          <h2 class="justify-center items-center text-xl flex gap-2 p-2">
+            HTMX <span
+              class="text-center bg-slate-800 rounded p-1 text-bold text-lg"
+              >{"<"}<span class="text-blue-800 font-black">/</span>{">"}</span
+            >
+          </h2>
+        </a>
+        <p>
+          На данный момент один из самых популярных библиотек для построения UI
+        </p>
+        <p>Был реализован счетчик, ToDo-List, а так же блог</p>
+      </div>
+    </div>
+  </body>
 </html>
