@@ -1,12 +1,11 @@
-import { useState } from "react"
-
-const Button = () => {
-    const [counter, setCount] = useState(0)
+import {useState} from 'react'
+export default function Button() {
+    const [count,setCount] = useState(0)
+    
     return (
-        <>
-            <div>{counter}</div>
-            <button onClick={() => setCount(counter+1)}>Click me </button>
-        </>
+    <>
+    <h1>{count}</h1>
+    <button onClick={()=>setCount(count+1)}>Click me</button>
+    </>
     )
 }
-export default Button

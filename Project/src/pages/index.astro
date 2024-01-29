@@ -1,5 +1,6 @@
 ---
 import QwikLogo from "../UI/QwikLogo.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -15,6 +16,7 @@ import QwikLogo from "../UI/QwikLogo.astro";
       referrerpolicy="no-referrer"
     />
     <title>Диплом</title>
+    <ViewTransitions />
   </head>
   <body class="p-4 bg-slate-800 flex flex-col gap-2">
     <div class="flex gap-2 flex-col">
@@ -34,13 +36,13 @@ import QwikLogo from "../UI/QwikLogo.astro";
     <div class="text-white grid gap-4 mx-auto">
       <!-- Parent div -->
       <!-- React -->
-      <div
-        class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
-      >
-        <i
-          class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
-        ></i>
-        <a href="/react-demo">
+      <a href="/react-demo">
+        <div
+          class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
+        >
+          <i
+            class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
+          ></i>
           <h2 class="text-center text-xl">
             React <i class="text-[#149ECA] fa-brands fa-react"></i>
           </h2>
@@ -49,67 +51,70 @@ import QwikLogo from "../UI/QwikLogo.astro";
             UI
           </p>
           <p>Был реализован счетчик, ToDo-List, а так же блог</p>
-        </a>
-      </div>
+        </div>
+      </a>
       <!-- Svelte -->
-      <div
-        class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
-      >
-        <i
-          class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
-        ></i>
-        <a href="svelte-demo">
+      <a href="svelte-demo">
+        <div
+          class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
+        >
+          <i
+            class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
+          ></i>
           <h2 class="justify-center items-center text-xl flex gap-2">
             Svelte <img
-              src="public/svelte-icon.svg"
+              src="/svelte-icon.svg"
               width="20px"
               height="20px"
               alt=""
             />
           </h2>
-        </a>
-        <p>
-          На данный момент один из самых популярных библиотек для построения UI
-        </p>
-        <p>Был реализован счетчик, ToDo-List, а так же блог</p>
-      </div>
+          <p>
+            На данный момент один из самых популярных библиотек для построения
+            UI
+          </p>
+          <p>Был реализован счетчик, ToDo-List, а так же блог</p>
+        </div>
+      </a>
       <!-- Qwik -->
-      <div
-        class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
-      >
-        <i
-          class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
-        ></i>
-        <a href="svelte-demo">
+      <a href="qwik-demo">
+        <div
+          class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
+        >
+          <i
+            class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
+          ></i>
           <h2 class="justify-center items-center text-xl flex gap-2">
             Qwik <QwikLogo />
           </h2>
-        </a>
-        <p>
-          На данный момент один из самых популярных библиотек для построения UI
-        </p>
-        <p>Был реализован счетчик, ToDo-List, а так же блог</p>
-      </div>
+          <p>
+            На данный момент один из самых популярных библиотек для построения
+            UI
+          </p>
+          <p>Был реализован счетчик, ToDo-List, а так же блог</p>
+        </div>
+      </a>
       <!-- HTMX -->
-      <div
-        class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
-      >
-        <i
-          class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
-        ></i>
-        <a href="svelte-demo">
+      <a href="htmx-demo">
+        <div
+          class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
+        >
+          <i
+            class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
+          ></i>
           <h2 class="justify-center items-center text-xl flex gap-2 p-2">
             HTMX <span
               class="text-center bg-slate-800 rounded p-1 text-bold text-lg"
               >{"<"}<span class="text-blue-800 font-black">/</span>{">"}</span
             >
           </h2>
-        </a>
-        <p>
-          На данный момент один из самых популярных библиотек для построения UI
-        </p>
-        <p>Был реализован счетчик, ToDo-List, а так же блог</p>
-      </div>
+          <p>
+            На данный момент один из самых популярных библиотек для построения
+            UI
+          </p>
+          <p>Был реализован счетчик, ToDo-List, а так же блог</p>
+        </div>
+      </a>
     </div>
   </body>
 </html>
