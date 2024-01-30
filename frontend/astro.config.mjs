@@ -13,4 +13,5 @@ export default defineConfig({
     qwikdev({ include: ["**/qwik/**"] }),
     svelte({ include: ["svelte"] }),
   ],
+  output: "server",
 });
