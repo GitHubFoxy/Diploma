@@ -9,7 +9,7 @@ const App = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/ReactFetchFromNode', {
+      const response = await fetch('/api/FetchFromNode', {
         method: 'GET',
       });
 

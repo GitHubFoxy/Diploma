@@ -1,8 +1,10 @@
 ---
 import DemoLayouts from "../../layout/demoLayouts.astro";
 import Button from "../../components/svelte/Button.svelte";
+import FetchData from "../../components/svelte/FetchData.svelte";
 ---
 
 <DemoLayouts>
   <Button client:load />
+  <FetchData client:load />
 </DemoLayouts>
