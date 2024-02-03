@@ -2,7 +2,7 @@
 import DemoLayouts from "../../layout/demoLayouts.astro";
 ---
 
-<DemoLayouts title="HTMX">
+<DemoLayouts data="HTMX + PHP" title="HTMX">
   <script src="https://unpkg.com/htmx.org@1.9.10"></script>
   <button hx-get="api/FetchFromPHP" hx-target="#result">Click me</button>
   <div id="result"></div>

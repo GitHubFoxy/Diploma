@@ -3,7 +3,7 @@ import { html } from '@elysiajs/html'
 
 const app = new Elysia()
 .use(html())
-.get("/", () => "<h1>Hello Elysia</h1>").listen(3000);
+.get("/", () => "Hello from bun and Elysia").listen(3000);
 
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`

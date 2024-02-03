@@ -4,7 +4,9 @@ import Button from "../../components/svelte/Button.svelte";
 import FetchData from "../../components/svelte/FetchData.svelte";
 ---
 
-<DemoLayouts>
-  <Button client:load />
-  <FetchData client:load />
+<DemoLayouts title="Svelte" data="Svelte + Bun">
+  <div class="p-2 flex gap-4">
+    <Button client:load />
+    <FetchData client:only="svelte" />
+  </div>
 </DemoLayouts>

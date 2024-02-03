@@ -1,5 +1,5 @@
-<script>
-  export let data;
+<script lang="ts">
+  let data: string;
   async function FetchData() {
     const response = await fetch("api/FetchFromBun", {
       method: "GET",
@@ -12,5 +12,10 @@
   }
 </script>
 
-<button on:click={FetchData()}>Fetch Data</button>
-<h1>{data}</h1>
+<div>
+  <button
+    class="cursor-pointer transition-colors p-2 rounded hover:bg-slate-300"
+    on:click={() => FetchData()}>Fetch Data</button
+  >
+  <h1>{data}</h1>
+</div>
