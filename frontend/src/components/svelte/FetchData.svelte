@@ -1,5 +1,5 @@
-<script>
-  export let data = "Waiting for fetch...";
+<script lang="ts">
+  let data: string;
   async function FetchData() {
     const response = await fetch("api/FetchFromBun", {
       method: "GET",
@@ -13,5 +13,4 @@
 </script>
 
 <button on:click={FetchData()}>Fetch Data</button>
-<!-- svelte-ignore missing-declaration -->
-<h1>{data}</h1>
+<h1>{result}</h1>
