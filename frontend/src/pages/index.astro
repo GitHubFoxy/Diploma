@@ -33,10 +33,10 @@ import { ViewTransitions } from "astro:transitions";
       </p>
     </div>
 
-    <div class="text-white grid gap-4 mx-auto">
+    <div class="text-white grid grid-cols-4 p-2 gap-4 mx-auto">
       <!-- Parent div -->
       <!-- React -->
-      <a href="/react-demo">
+      <a class="flex" href="/react-demo">
         <div
           class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
         >
@@ -46,15 +46,19 @@ import { ViewTransitions } from "astro:transitions";
           <h2 class="text-center text-xl">
             React <i class="text-[#149ECA] fa-brands fa-react"></i>
           </h2>
+          <hr class="opacity-30 mt-2 pb-2" />
           <p>
-            На данный момент один из самых популярных библиотек для построения
-            UI
+            Мощный и популярный фреймворк для создания веб-приложений. Он
+            предоставляет удобные инструменты для работы с данными и
+            компонентами, а также поддерживает горячую перезагрузку, что делает
+            его идеальным выбором для разработки быстрого и эффективного
+            веб-приложения. Поддерживает различные библиотеки и инструменты для
+            расширения функциональности.
           </p>
-          <p>Был реализован счетчик, ToDo-List, а так же блог</p>
         </div>
       </a>
       <!-- Svelte -->
-      <a href="svelte-demo">
+      <a class="flex" href="svelte-demo">
         <div
           class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
         >
@@ -69,15 +73,19 @@ import { ViewTransitions } from "astro:transitions";
               alt=""
             />
           </h2>
+          <hr class="opacity-30 mt-2 pb-2" />
           <p>
-            На данный момент один из самых популярных библиотек для построения
-            UI
+            Легкий, современный и мощный фреймворк для создания веб-приложений.
+            Он позволяет создавать высокопроизводительные и отзывчивые
+            приложения с минимальным кодом. Svelte предоставляет удобные
+            инструменты для работы с данными и компонентами, а также
+            поддерживает горячую перезагрузку, что делает его идеальным выбором
+            для разработки быстрого и эффективного веб-приложения.
           </p>
-          <p>Был реализован счетчик, ToDo-List, а так же блог</p>
         </div>
       </a>
       <!-- Qwik -->
-      <a href="qwik-demo">
+      <a class="flex" href="qwik-demo">
         <div
           class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
         >
@@ -87,32 +95,43 @@ import { ViewTransitions } from "astro:transitions";
           <h2 class="justify-center items-center text-xl flex gap-2">
             Qwik <QwikLogo />
           </h2>
+          <hr class="opacity-30 mt-2 pb-2" />
           <p>
-            На данный момент один из самых популярных библиотек для построения
-            UI
+            Qwik - это новый фреймворк для создания веб-приложений, который
+            сочетает в себе мощь React и скорость Svelte. Он предлагает простой
+            и понятный синтаксис, горячую перезагрузку и возможность
+            использования компонентов из других библиотек. Qwik также
+            предоставляет инструменты для работы с данными и анимациями, что
+            делает его идеальным выбором для разработки современных и
+            интерактивных веб-приложений.
           </p>
-          <p>Был реализован счетчик, ToDo-List, а так же блог</p>
         </div>
       </a>
       <!-- HTMX -->
-      <a href="htmx-demo">
+      <a class="flex" href="htmx-demo">
         <div
           class="relative text-center p-4 rounded bg-slate-700 transition-colors duration-100 cursor-pointer hover:bg-slate-600"
         >
           <i
             class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
           ></i>
-          <h2 class="justify-center items-center text-xl flex gap-2 p-2">
-            HTMX <span
-              class="text-center bg-slate-800 rounded p-1 text-bold text-lg"
-              >{"<"}<span class="text-blue-800 font-black">/</span>{">"}</span
-            >
+          <h2 class="justify-center items-center text-xl flex gap-2">
+            htmx <span class="px-1 font-bold text-base rounded-md bg-gray-600">
+              <span>{"<"}</span>
+              <span class="text-blue-950">{"/"}</span>
+              <span>{">"}</span>
+            </span>
           </h2>
+          <hr class="opacity-30 mt-2 pb-2" />
           <p>
-            На данный момент один из самых популярных библиотек для построения
-            UI
+            HTMX - это библиотека для создания интерактивных веб-приложений на
+            основе HTML и JavaScript. Она позволяет легко интегрировать AJAX и
+            другие веб-технологии в ваш проект, делая его более быстрым и
+            отзывчивым. HTMX предоставляет удобные инструменты для работы с
+            данными и анимациями, а также поддерживает горячую перезагрузку, что
+            делает его идеальным выбором для разработки современных и
+            интерактивных веб-приложений.
           </p>
-          <p>Был реализован счетчик, ToDo-List, а так же блог</p>
         </div>
       </a>
     </div>
