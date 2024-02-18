@@ -26,13 +26,6 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
 
     <div class="flex gap-2 flex-col dark:bg-zinc-600 bg-zinc-200 p-4 rounded">
       <h1 class="text-2xl text-center">Сравнение разных веб технологий</h1>
-      <p class="text-center">
-        Данная страница была сгенирирована (SSG) web-framework <a
-          href="https://www.astro.build"
-          target="_blank"
-          class="underline text-lg">Astro</a
-        >
-      </p>
     </div>
 
     <div
@@ -188,9 +181,15 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
       </a>
     </div>
     <footer
-      class="dark:bg-zinc-600 rounded p-4 bg-zinc-200 hover:bg-zinc-300 transition-colors duration-300 dark:hover:bg-zinc-700"
+      class="text-center dark:bg-zinc-600 rounded p-4 bg-zinc-200 hover:bg-zinc-300 transition-colors duration-300 dark:hover:bg-zinc-700"
     >
-      Footer
+      <p class="text-center">
+        Данная проект был построен на Server-Side-Generation web-framework <a
+          href="https://www.astro.build"
+          target="_blank"
+          class="underline">Astro</a
+        >
+      </p>
     </footer>
     <script is:inline>
       //Check theme
