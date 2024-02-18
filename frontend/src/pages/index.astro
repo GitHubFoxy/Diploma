@@ -35,12 +35,14 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
       </p>
     </div>
 
-    <div class="flex flex-col lg:grid grid-cols-4 gap-4 mx-auto">
+    <div
+      class="flex flex-col lg:grid lg:grid-cols-4 lg:grid-rows-1 gap-4 mx-auto"
+    >
       <!-- Parent div -->
       <!-- React -->
-      <a class="flex" href="/react-demo">
+      <a class="group relative flex flex-col gap-2">
         <div
-          class="relative text-center p-4 rounded dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-300 cursor-pointer bg-zinc-200 hover:bg-zinc-300"
+          class="h-full text-center p-4 rounded dark:bg-zinc-600 dark:group-hover:bg-zinc-700 transition-colors duration-300 cursor-pointer bg-zinc-200 hover:bg-zinc-300"
         >
           <i
             class="color-white absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
@@ -49,7 +51,7 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
             React <i class="text-[#149ECA] fa-brands fa-react"></i>
           </h2>
           <hr class="opacity-30 mt-2 pb-2" />
-          <p>
+          <p class="">
             Мощный и популярный фреймворк для создания веб-приложений. Он
             предоставляет удобные инструменты для работы с данными и
             компонентами, а также поддерживает горячую перезагрузку, что делает
@@ -58,11 +60,23 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
             расширения функциональности.
           </p>
         </div>
+        <div class="flex gap-2 w-full">
+          <div
+            class="w-full transition-colors duration-300 text-center p-4 rounded bg-zinc-200 group-hover:bg-zinc-300 dark:bg-zinc-600 dark:group-hover:bg-zinc-700"
+          >
+            NodeJS
+          </div>
+          <div
+            class="w-full transition-colors duration-300 text-center p-4 rounded bg-zinc-200 group-hover:bg-zinc-300 dark:bg-zinc-600 dark:group-hover:bg-zinc-700"
+          >
+            MongoDB
+          </div>
+        </div>
       </a>
       <!-- Svelte -->
-      <a class="flex" href="svelte-demo">
+      <a class="group relative flex flex-col gap-2" href="svelte-demo">
         <div
-          class="relative text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
+          class="h-full text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
         >
           <i
             class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
@@ -85,11 +99,23 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
             для разработки быстрого и эффективного веб-приложения.
           </p>
         </div>
+        <div class="flex gap-2 w-full">
+          <div
+            class="w-full transition-colors duration-300 text-center p-4 rounded bg-zinc-200 group-hover:bg-zinc-300 dark:bg-zinc-600 dark:group-hover:bg-zinc-700"
+          >
+            Bun
+          </div>
+          <div
+            class="w-full transition-colors duration-300 text-center p-4 rounded bg-zinc-200 group-hover:bg-zinc-300 dark:bg-zinc-600 dark:group-hover:bg-zinc-700"
+          >
+            PostgreSQL
+          </div>
+        </div>
       </a>
       <!-- Qwik -->
-      <a class="flex" href="qwik-demo">
+      <a class="group relative flex flex-col gap-2" href="qwik-demo">
         <div
-          class="relative text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
+          class="h-full text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
         >
           <i
             class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
@@ -108,11 +134,23 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
             интерактивных веб-приложений.
           </p>
         </div>
+        <div class="flex gap-2 w-full">
+          <div
+            class="w-full transition-colors duration-300 text-center p-4 rounded bg-zinc-200 group-hover:bg-zinc-300 dark:bg-zinc-600 dark:group-hover:bg-zinc-700"
+          >
+            Go
+          </div>
+          <div
+            class="w-full transition-colors duration-300 text-center p-4 rounded bg-zinc-200 group-hover:bg-zinc-300 dark:bg-zinc-600 dark:group-hover:bg-zinc-700"
+          >
+            Redis
+          </div>
+        </div>
       </a>
       <!-- HTMX -->
-      <a class="flex" href="htmx-demo">
+      <a class="group relative flex flex-col gap-2" href="htmx-demo">
         <div
-          class="relative text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
+          class="h-full text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
         >
           <i
             class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
@@ -135,8 +173,25 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
             интерактивных веб-приложений.
           </p>
         </div>
+        <div class="flex gap-2 w-full">
+          <div
+            class="w-full transition-colors duration-300 text-center p-4 rounded bg-zinc-200 group-hover:bg-zinc-300 dark:bg-zinc-600 dark:group-hover:bg-zinc-700"
+          >
+            PHP
+          </div>
+          <div
+            class="w-full transition-colors duration-300 text-center p-4 rounded bg-zinc-200 group-hover:bg-zinc-300 dark:bg-zinc-600 dark:group-hover:bg-zinc-700"
+          >
+            MySQL
+          </div>
+        </div>
       </a>
     </div>
+    <footer
+      class="dark:bg-zinc-600 rounded p-4 bg-zinc-200 hover:bg-zinc-300 transition-colors duration-300 dark:hover:bg-zinc-700"
+    >
+      Footer
+    </footer>
     <script is:inline>
       //Check theme
       if (localStorage.getItem("theme") === "dark") {
