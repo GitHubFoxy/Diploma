@@ -1,4 +1,6 @@
 ---
+import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
+
 const { title, data } = Astro.props;
 ---
 
@@ -8,16 +10,24 @@ const { title, data } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
   </head>
-  <body>
-    <header class="bg-slate-500 text-white">
+  <body class="bg-zinc-200 text-black dark:bg-zinc-600 dark:text-white">
+    <header class="bg-zinc-300 text-black dark:bg-zinc-700 dark:text-white">
       <nav class="flex justify-center mx-auto max-w-xl p-2">
+        <ThemeSwitcher />
+
         <a
           href="/"
-          class="p-2 transition-colors duration-100 rounded hover:bg-slate-600"
+          class="p-2 transition-colors duration-100 rounded hover:bg-zinc-400 dark:hover:bg-zinc-800"
           >{data}</a
         >
       </nav>
     </header>
     <slot />
+    <script is:inline>
+      //Check theme
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </body>
 </html>
