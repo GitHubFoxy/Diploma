@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  php: 
+    build: 
+      context: ./docker/php/
+    volumes: 
+    - ./backend/php:/var/www/html
+    ports:
+      - 3002:3002
+    command: php -S 0.0.0.0:3002 
+
+  mysql:
+    image: a88c3e
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+
+  
