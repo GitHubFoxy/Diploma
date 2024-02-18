@@ -13,7 +13,7 @@ const UserSchema = new mongoose.Schema({
 const UserModel = mongoose.model("users", UserSchema);
 
 app.get("/", (req, res) => {
-  UserModel.find({}).then(function (data) {
+  UserModel.find().then(function (data) {
     res.json(data);
   });
 });

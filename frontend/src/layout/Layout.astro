@@ -9,15 +9,21 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
     <meta name="generator" content={Astro.generator} />
     <title>ВКР</title>
   </head>
-  <body class="dark:bg-zinc-700 bg-zinc-50">
-    <header class="dark:text-white">
+  <body class="dark:bg-zinc-600 bg-zinc-50">
+    <header class="dark:text-white text-black">
       <nav class="flex justify-evenly items-center py-2">
         <h1 class="text-xl">Выпускная квалификационная работа</h1>
-        <ThemeSwitcher client:load />
+        <ThemeSwitcher />
       </nav>
     </header>
     <div class="bg-slate-600 container mx-auto">
       <slot />
     </div>
+    <script is:inline>
+      //Check theme
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </body>
 </html>
