@@ -1,3 +1,3 @@
 <?php
-phpinfo();
+$conn = mysqli_connect("mysql", "root", "root");
 ?>

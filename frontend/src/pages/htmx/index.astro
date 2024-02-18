@@ -4,5 +4,95 @@ import DemoLayouts from "../../layout/demoLayouts.astro";
 
 <DemoLayouts data="HTMX + PHP" title="HTMX">
   <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-  <main></main>
+  <main class="mt-1">
+    <nav
+      class="flex justify-between bg-zinc-300 dark:bg-zinc-700 p-4 items-center"
+    >
+      <div class="flex gap-1 black dark:grayscale">
+        <div>
+          <img
+            loading="lazy"
+            class="aspect-square w-8 rounded-full"
+            src="./htmx.webp"
+            alt="htmx-logo"
+          />
+        </div>
+        <div>
+          <img
+            loading="lazy"
+            class="aspect-square w-8"
+            src="./php.webp"
+            alt="php logo"
+          />
+        </div>
+        <div>
+          <img
+            loading="lazy"
+            class="aspect-square w-8"
+            src="./mysql.webp"
+            alt="mysql database logo"
+          />
+        </div>
+      </div>
+      <h1>Добро пожаловать</h1>
+      <button
+        id="btnThatOpenModal"
+        class="py-2 px-6 bg-zinc-400 dark:bg-zinc-600 rounded-xl">Войти</button
+      >
+      <dialog
+        class="bg-zinc-300 dark:bg-zinc-800 text-black dark:text-white p-4 rounded backdrop:bg-black backdrop:opacity-40"
+      >
+        <div class="relative">
+          <span
+            id="btnThatClosesModal"
+            class="font-2xl p-2 absolute -right-2 -top-4 cursor-pointer">x</span
+          >
+          <h1 class="text-center">Авторизуйтесь</h1>
+          <form>
+            <div class="mt-2 flex flex-col gap-2">
+              <input
+                type="text"
+                class="text-black p-1 rounded"
+                placeholder="Логин"
+                name="login"
+              />
+              <input
+                type="text"
+                class="text-black p-1 rounded"
+                placeholder="Пароль"
+                name="password"
+              />
+              <button
+                id="btnThatConfirms"
+                hx-post="/api/posttophp"
+                hx-swap="none"
+                class="px-6 py-2 bg-zinc-200 dark:bg-zinc-700 rounded text-white"
+                >Войти</button
+              >
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </nav>
+  </main>
+
+  <div></div>
+  <script is:inline>
+    document
+      .querySelector("#btnThatConfirms")
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+
+    document
+      .querySelector("#btnThatOpenModal")
+      .addEventListener("click", () => {
+        document.querySelector("dialog").showModal();
+      });
+    document
+      .querySelector("#btnThatClosesModal")
+      .addEventListener("click", () => {
+        document.querySelector("dialog").close();
+      });
+  </script>
 </DemoLayouts>

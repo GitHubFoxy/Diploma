@@ -44,7 +44,7 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
             React <i class="text-[#149ECA] fa-brands fa-react"></i>
           </h2>
           <hr class="opacity-30 mt-2 pb-2" />
-          <p class="">
+          <p>
             Мощный и популярный фреймворк для создания веб-приложений. Он
             предоставляет удобные инструменты для работы с данными и
             компонентами, а также поддерживает горячую перезагрузку, что делает
@@ -69,7 +69,7 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
       <!-- Svelte -->
       <a class="group relative flex flex-col gap-2" href="svelte">
         <div
-          class="h-full text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
+          class="h-full text-center p-4 rounded dark:bg-zinc-600 dark:group-hover:bg-zinc-700 transition-colors duration-300 cursor-pointer bg-zinc-200 hover:bg-zinc-300"
         >
           <i
             class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
@@ -108,7 +108,7 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
       <!-- Qwik -->
       <a class="group relative flex flex-col gap-2" href="qwik">
         <div
-          class="h-full text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
+          class="h-full text-center p-4 rounded dark:bg-zinc-600 dark:group-hover:bg-zinc-700 transition-colors duration-300 cursor-pointer bg-zinc-200 hover:bg-zinc-300"
         >
           <i
             class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
@@ -143,7 +143,7 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
       <!-- HTMX -->
       <a class="group relative flex flex-col gap-2" href="htmx">
         <div
-          class="h-full text-center p-4 rounded bg-zinc-200 dark:bg-zinc-600 dark:hover:bg-zinc-700 transition-colors duration-100 cursor-pointer hover:bg-zinc-300"
+          class="h-full text-center p-4 rounded dark:bg-zinc-600 dark:group-hover:bg-zinc-700 transition-colors duration-300 cursor-pointer bg-zinc-200 hover:bg-zinc-300"
         >
           <i
             class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
@@ -191,5 +191,11 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
         >
       </p>
     </footer>
+    <script is:inline>
+      //Check theme
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </body>
 </html>
