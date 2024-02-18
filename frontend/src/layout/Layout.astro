@@ -1,0 +1,23 @@
+---
+import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
+---
+
+<html lang="en" class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>ВКР</title>
+  </head>
+  <body class="dark:bg-zinc-700 bg-zinc-50">
+    <header class="dark:text-white">
+      <nav class="flex justify-evenly items-center py-2">
+        <h1 class="text-xl">Выпускная квалификационная работа</h1>
+        <ThemeSwitcher client:load />
+      </nav>
+    </header>
+    <div class="bg-slate-600 container mx-auto">
+      <slot />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<button
+  onclick="() => {
+    console.log('hello')
+  }
+    "
+  class="hover:bg-slate-700 transition-colors duration-300 hidden sm:block absolute bottom-5 right-5 text-white w-10 aspect-square rounded-full dark:hover:bg-slate-600 dark:bg-slate-200 bg-slate-800"
+></button>
+
+<script>
+  function changeTheme() {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        const newColorScheme = event.matches ? "dark" : "light";
+        console.log(newColorScheme);
+      });
+  }
+</script>
