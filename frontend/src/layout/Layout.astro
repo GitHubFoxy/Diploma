@@ -12,11 +12,12 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
   <body class="dark:bg-zinc-600 bg-zinc-50">
     <header class="dark:text-white text-black">
       <nav class="flex justify-evenly items-center py-2">
-        <h1 class="text-xl">Выпускная квалификационная работа</h1>
+        <h1 class="text-center text-xl">Выпускная квалификационная работа</h1>
         <ThemeSwitcher />
       </nav>
+      <hr class="opacity-25" />
     </header>
-    <div class="bg-slate-600 container mx-auto">
+    <div class="container p-4 mx-auto">
       <slot />
     </div>
     <script is:inline>
