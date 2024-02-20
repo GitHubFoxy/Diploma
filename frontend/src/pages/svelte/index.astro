@@ -4,9 +4,121 @@ import Button from "../../components/svelte/Button.svelte";
 import FetchData from "../../components/svelte/FetchData.svelte";
 ---
 
-<DemoLayouts title="Svelte" data="Svelte + Bun">
-  <div class="p-2 flex gap-4">
-    <Button client:load />
-    <FetchData client:only="svelte" />
-  </div>
+<DemoLayouts data="SVELTE + BUN" title="SVELTE">
+  <main class="mt-1 flex flex-col h-screen">
+    <nav
+      class="flex justify-between bg-zinc-300 dark:bg-zinc-700 p-4 items-center"
+    >
+      <div class="flex gap-1 black dark:grayscale">
+        <div>
+          
+        </div>
+      </div>
+      <h1>Добро пожаловать</h1>
+      <button
+      onclick={"document.getElementById('login').showModal()"}
+        class="py-2 px-6 bg-zinc-400 dark:bg-zinc-600 rounded-xl">Войти</button
+      >
+      <dialog id="login"
+        class="bg-zinc-300 dark:bg-zinc-800 text-black dark:text-white p-4 rounded backdrop:bg-black backdrop:opacity-40"
+      >
+        <div class="relative">
+          <span
+            onclick={"document.getElementById('login').close()"}
+            class="font-2xl p-2 absolute -right-2 -top-4 cursor-pointer">x</span
+          >
+          <h1 class="text-center">Авторизуйтесь</h1>
+          <form>
+            <div class="mt-2 flex flex-col gap-2">
+              <input
+                type="text"
+                class="text-black p-2 rounded"
+                placeholder="Логин"
+                name="login"
+              />
+              <input
+                type="text"
+                class="text-black p-2 rounded"
+                placeholder="Пароль"
+                name="password"
+              />
+              <input type="text" hidden  name="type" value="login">
+
+              <button
+                id="btnThatConfirms"
+                hx-post="/api/posttophp"
+                hx-swap="none"
+                class="px-6 py-2 bg-zinc-200 dark:bg-zinc-700 rounded text-white"
+                >Войти</button
+              >
+              <button
+                onclick={"document.getElementById('login').close(); document.getElementById('register').showModal()"}
+                type="button"
+                class="text-center text-xs underline underline-offset-4 p-2"
+                >Зарегистрироваться</button
+              >
+            </div>
+          </form>
+        </div>
+      </dialog>
+      <dialog id="register"
+        class="bg-zinc-300 dark:bg-zinc-800 text-black dark:text-white p-4 rounded backdrop:bg-black backdrop:opacity-40"
+      >
+        <div class="relative">
+          <span
+          onclick={`document.getElementById('register').close()`}
+          id="btnThatClosesRegisterModal"
+            class="font-2xl p-2 absolute -right-2 -top-4 cursor-pointer">x</span
+          >
+          <h1 class="text-center">Регистрация</h1>
+          <form>
+            <div class="mt-2 flex flex-col gap-2">
+              <input
+                type="text"
+                class="text-black p-2 rounded"
+                placeholder="Логин"
+                name="login"
+              />
+              <input
+                type="text"
+                class="text-black p-2 rounded"
+                placeholder="Пароль"
+                name="password"
+              />
+              <input type="text" name="type" hidden  value="register">
+              <button
+                id="btnThatConfirms"
+                hx-post="/api/posttophp"
+                hx-swap="none"
+                class="px-6 py-2 bg-zinc-200 dark:bg-zinc-700 rounded text-white"
+                >Зарегистрироваться</button
+              >
+              <button
+                type="button"
+                onclick={"document.getElementById('register').close(); document.getElementById('login').showModal()"}
+                class="text-center text-xs underline underline-offset-4 p-2"
+                >Уже есть аккаунт?</button
+              >
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </nav>
+    <section class="grow grid place-content-center">
+      <h1 class="text-center">
+        Пожалуйста <span
+          id="btnThatOpenModal"
+          class="underline underline-offset-2 cursor-pointer"
+          onclick={"document.getElementById('login').showModal()"}
+          >авторизуйтесь</span
+        >, чтобы смотреть контент
+      </h1>
+    </section>
+  </main>
+
+  <div></div>
+  <script is:inline>
+  </script>
+</DemoLayouts>
+
 </DemoLayouts>
