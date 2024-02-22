@@ -4,7 +4,7 @@ import DemoLayouts from "../../layout/demoLayouts.astro";
 
 <DemoLayouts data="HTMX + PHP" title="HTMX">
   <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-  <main hx-get="/api/htmx/posts" hx-trigger="load">
+  <main class="flex  gap-4 md:grid md:grid-cols-5 p-4 " hx-get="/api/htmx/posts" hx-trigger="load">
   
   </main>
 </DemoLayouts>

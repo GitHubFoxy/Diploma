@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mysql:
+    build:
+      context: ./
+      args:
+        - MYSQL_DATABASE=diplomaDB
+        - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"

@@ -1,12 +1,10 @@
 ---
-import Button from "../../components/react/Button";
+import App from "../../components/react/App";
 import DemoLayouts from "../../layout/demoLayouts.astro";
-import FetchComponent from "../../components/react/Fetch";
 ---
 
 <DemoLayouts title="React" data="React + Nodejs">
   <div class="flex gap-2">
-    <Button client:load />
-    <FetchComponent client:load />
+    <App client:only="react" />
   </div>
 </DemoLayouts>

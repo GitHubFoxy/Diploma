@@ -12,4 +12,4 @@ COPY --chown=node:node . ./
 
 EXPOSE 3001
 
-CMD ["node", "app/index.js"] 
+CMD ["npm", "run","dev"] 
