@@ -1,10 +1,11 @@
 ---
 import QwikLogo from "../UI/QwikLogo.astro";
-import { ViewTransitions } from "astro:transitions";
 import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
+import { ViewTransitions } from "astro:transitions";
+
 ---
 
-<html lang="en">
+<html lang="en" transition:persist>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -17,7 +18,8 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
       referrerpolicy="no-referrer"
     />
     <title>Диплом</title>
-    <ViewTransitions />
+    <ViewTransitions/>
+
   </head>
   <body
     class="p-4 bg-zinc-100 flex flex-col gap-4 text-black dark:bg-zinc-800 dark:text-white"
@@ -149,7 +151,7 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
             class="absolute right-[-5px] rotate-[-45deg] bottom-[-5px] fa-solid fa-hand-pointer"
           ></i>
           <h2 class="justify-center items-center text-xl flex gap-2">
-            htmx <span class="px-1 font-bold text-base rounded-md bg-gray-600">
+            htmx <span class="px-1 font-bold text-base rounded-md bg-gray-400 dark:bg-gray-600">
               <span>{"<"}</span>
               <span class="text-blue-950">{"/"}</span>
               <span>{">"}</span>
@@ -184,10 +186,10 @@ import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
       class="text-center dark:bg-zinc-600 rounded p-4 bg-zinc-200 hover:bg-zinc-300 transition-colors duration-300 dark:hover:bg-zinc-700"
     >
       <p class="text-center">
-        Данная проект был построен на Server-Side-Generation web-framework <a
+        Данная проект был построен на web-framework <a
           href="https://www.astro.build"
           target="_blank"
-          class="underline">Astro</a
+          class="underline  ">Astro</a
         >
       </p>
     </footer>

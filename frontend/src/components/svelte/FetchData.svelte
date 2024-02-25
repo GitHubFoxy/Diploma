@@ -1,5 +1,5 @@
-<script lang="ts">
-  let data: string = "Waiting for fetch";
+<script >
+  let data = "Waiting for fetch";
   async function FetchData() {
     const response = await fetch("api/FetchFromBun", {
       method: "GET",

@@ -1,14 +1,16 @@
 ---
 import ThemeSwitcher from "../UI/ThemeSwitcher.astro";
+import { ViewTransitions } from "astro:transitions";
 
 const { title, data } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" transition:persist>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <ViewTransitions/>
   </head>
   <body class="bg-zinc-200 text-black dark:bg-zinc-600 dark:text-white">
     <header class="bg-zinc-300 text-black dark:bg-zinc-700 dark:text-white">

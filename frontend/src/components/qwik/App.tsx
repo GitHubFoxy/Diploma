@@ -1,6 +1,7 @@
 import { component$ } from '@builder.io/qwik';
- 
+ // @ts-ignore
 export default component$(() => {
-    
-  return <section class="section bright">Hello qwik</section>;
+  return (
+  <section className="section bright">Hello qwik</section>
+  )
 });
